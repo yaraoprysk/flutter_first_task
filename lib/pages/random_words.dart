@@ -1,5 +1,6 @@
 import 'package:english_words/english_words.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_first_task/pages/random_gifs.dart';
 
 class RandomWords extends StatefulWidget {
   @override
@@ -93,6 +94,17 @@ class _RandomWordsState extends State<RandomWords> {
               title: const Text('Saved Suggestions'),
             ),
             body: ListView(children: divided),
+            floatingActionButton: FloatingActionButton.extended(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                MaterialPageRoute(builder: (context) => RandomGifs()),
+                );
+              },
+              label: const Text('More!'),
+              icon: const Icon(Icons.thumb_up),
+              backgroundColor: Colors.pink,
+            ),
           );
         },
       ),
